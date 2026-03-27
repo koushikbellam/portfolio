@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Deploying static website"
+
+  post_build:
+    commands:
+      - aws s3 sync . s3://your-bucket-name --delete
