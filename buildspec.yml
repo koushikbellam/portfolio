@@ -3,8 +3,8 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo "Deploying static website"
+      - echo "Build completed"
 
-  post_build:
-    commands:
-      - aws s3 sync . s3://vit-student --delete
+artifacts:
+  files:
+    - '**/*'
